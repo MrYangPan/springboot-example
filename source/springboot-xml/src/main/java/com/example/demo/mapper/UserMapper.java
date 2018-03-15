@@ -1,7 +1,6 @@
 package com.example.demo.mapper;
 
-import com.example.demo.entity.UserEntity;
-import org.apache.ibatis.annotations.*;
+import com.example.demo.model.UserEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
