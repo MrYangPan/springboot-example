@@ -30,6 +30,7 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
+
         </repository>
         <repository>
             <id>nexus</id>
