@@ -38,6 +38,7 @@
             <url>http://nexus.tonglvhuanqiu.com/repository/maven-public/</url>
         </repository>
     </repositories>
+
     <pluginRepositories>
         <pluginRepository>
             <id>nexus</id>
