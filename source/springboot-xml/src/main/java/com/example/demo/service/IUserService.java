@@ -1,22 +1,41 @@
 package com.example.demo.service;
 
-import com.example.demo.model.UserEntity;
-
-import java.util.List;
+import com.example.demo.model.UserVo;
 
 /**
  * Created by Mr.PanYang on 2018/3/15.
  */
 public interface IUserService {
 
-    List<UserEntity> getAllUsers();
+    /**
+     * 保存用户数据
+     *
+     * @param userVo 用户数据
+     * @return 主键
+     */
 
-    UserEntity getOne(int id);
+    Integer insertUser(UserVo userVo);
 
-    void insert(UserEntity user);
+    /**
+     * 通过uid查找对象
+     * @param uid
+     * @return
+     */
+    UserVo queryUserById(Integer uid);
 
-    void update(UserEntity user);
+    /**
+     * 用戶登录
+     * @param username
+     * @param password
+     * @return
+     */
+    UserVo login(String username, String password);
 
-    void delete(int id);
+    /**
+     * 根据主键更新user对象
+     * @param userVo
+     * @return
+     */
+    void updateByUid(UserVo userVo);
 
 }
