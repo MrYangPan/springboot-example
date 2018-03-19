@@ -12,7 +12,8 @@
     <description>Demo project for Spring Boot</description>
 
     <modules>
-        <module>source</module>
+        <module>source/springboot-annotation</module>
+        <module>source/springboot-xml</module>
     </modules>
 
     <parent>
