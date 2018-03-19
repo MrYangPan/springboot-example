@@ -1,6 +1,7 @@
 package com.example.demo.controller.admin;
 
 import com.example.demo.config.WebConst;
+import com.example.demo.controller.BaseController;
 import com.example.demo.model.*;
 import com.example.demo.service.IAttachService;
 import com.example.demo.service.ILogService;
@@ -27,7 +28,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("admin/attach")
-public class AttachController extends BaseController{
+public class AttachController extends BaseController {
     private static final Logger LOGGER = LoggerFactory.getLogger(AttachController.class);
 
     public static final String CLASSPATH = TaleUtils.getUplodFilePath();

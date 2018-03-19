@@ -1,4 +1,4 @@
-package com.example.demo.controller.admin;
+package com.example.demo.controller;
 
 import com.example.demo.exception.TipException;
 import org.slf4j.Logger;
