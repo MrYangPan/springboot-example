@@ -1,5 +1,7 @@
-package com.example.demo.model;
+package com.example.demo.mapper;
 
+import com.example.demo.model.LogVo;
+import com.example.demo.model.LogVoExample;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 

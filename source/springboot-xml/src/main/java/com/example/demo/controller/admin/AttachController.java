@@ -9,12 +9,12 @@ import com.example.demo.utils.TaleUtils;
 import com.github.pagehelper.PageInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -32,10 +32,10 @@ public class AttachController extends BaseController{
 
     public static final String CLASSPATH = TaleUtils.getUplodFilePath();
 
-    @Resource
+    @Autowired
     private IAttachService attachService;
 
-    @Resource
+    @Autowired
     private ILogService logService;
 
     /**

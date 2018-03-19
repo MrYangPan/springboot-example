@@ -1,17 +1,17 @@
 package com.example.demo.service.impl;
 
 import com.example.demo.config.WebConst;
+import com.example.demo.mapper.LogVoMapper;
 import com.example.demo.model.LogVo;
 import com.example.demo.model.LogVoExample;
-import com.example.demo.model.LogVoMapper;
 import com.example.demo.service.ILogService;
 import com.example.demo.utils.DateKit;
 import com.github.pagehelper.PageHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -22,7 +22,7 @@ public class LogServiceImpl implements ILogService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(LogServiceImpl.class);
 
-    @Resource
+    @Autowired
     private LogVoMapper logDao;
 
     @Override

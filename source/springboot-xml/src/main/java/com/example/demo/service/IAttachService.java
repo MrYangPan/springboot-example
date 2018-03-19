@@ -2,12 +2,10 @@ package com.example.demo.service;
 
 import com.example.demo.model.AttachVo;
 import com.github.pagehelper.PageInfo;
-import org.springframework.stereotype.Component;
 
 /**
  * Created by Mr.PanYang on 2018/3/15.
  */
-@Component
 public interface IAttachService {
     /**
      * 分页查询附件

@@ -4,7 +4,7 @@
     <sql id="selectColums">
         select id,userName,`passWord`,nick_name,user_sex from users
     </sql>
-    <resultMap id="userResultMap" type="com.example.demo.entity.UserEntity">
+    <resultMap id="userResultMap" type="com.example.demo.model.UserEntity">
         <result column="id" property="id"></result>
         <result column="userName" property="userName"></result>
         <result column="passWord" property="passWord"></result>
@@ -21,7 +21,7 @@
         where id=#{id}
     </select>
 
-    <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.example.demo.entity.UserEntity">
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.example.demo.model.UserEntity">
         insert into users(userName,passWord,user_sex) VALUES(#{userName}, #{passWord}, #{userSex})
     </insert>
 
@@ -29,7 +29,7 @@
         DELETE FROM users WHERE id =#{id}
     </delete>
 
-    <update id="update" parameterType="com.example.demo.entity.UserEntity">
+    <update id="update" parameterType="com.example.demo.model.UserEntity">
         UPDATE users SET userName=#{userName},nick_name=#{nickName} WHERE id =#{id}
     </update>
 
