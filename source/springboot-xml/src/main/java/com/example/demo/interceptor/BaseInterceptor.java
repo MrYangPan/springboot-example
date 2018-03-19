@@ -5,7 +5,6 @@ import com.example.demo.model.OptionVo;
 import com.example.demo.model.Types;
 import com.example.demo.model.UserVo;
 import com.example.demo.service.IOptionService;
-import com.example.demo.utils.IPKit;
 import com.example.demo.service.IUserService;
 import com.example.demo.utils.*;
 import org.slf4j.Logger;
@@ -17,7 +16,6 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.List;
 
 /**
  * 自定义拦截器
@@ -76,7 +74,6 @@ public class BaseInterceptor implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
-        List<OptionVo> optionVoList = optionService.getOptions();
         OptionVo ov = optionService.getOptionByName("site_record");
         httpServletRequest.setAttribute("commons", commons);//一些工具类和公共方法
         httpServletRequest.setAttribute("option", ov);
