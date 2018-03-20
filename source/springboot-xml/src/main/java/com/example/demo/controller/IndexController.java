@@ -4,6 +4,8 @@ import com.example.demo.config.WebConst;
 import com.example.demo.model.ContentVo;
 import com.example.demo.service.IContentService;
 import com.github.pagehelper.PageInfo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,8 +15,10 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Created by Mr.PanYang on 2018/3/15.
  */
-public class IndexController extends BaseController{
+@Controller
+public class IndexController extends BaseController {
 
+    @Autowired
     private IContentService contentService;
 
     /**
