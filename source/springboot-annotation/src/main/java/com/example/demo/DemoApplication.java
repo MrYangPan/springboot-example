@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * <p>
  * 2.@ComponentScan 注解：扫包范围，扫包范围要精确，范围大影响性能,缺点：如果扫包很多的话，写起来麻烦
  * <p>
- * 3.@SpringBootApplication 注解：等同于  @EnableAutoConfiguration  +  @ComponentScan 同级包和当前包
+ * 3.@SpringBootApplication 注解：等同于  @EnableAutoConfiguration  +  @ComponentScan 同级包（包含子包）和当前包，缺点：影响性能
  */
 
 @SpringBootApplication
