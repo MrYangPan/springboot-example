@@ -11,6 +11,9 @@ import java.util.List;
 
 /**
  * Created by Mr.PanYang on 2018/3/15.
+ *
+ * @RestController 注解表示该类中的所有方法都会返回 json 格式数据，  =======》 @Controller  +   @ResponseBody
+ * 是SpringMVC3.0 中的提供的注解
  */
 @RestController
 public class HomeController {
@@ -33,12 +36,12 @@ public class HomeController {
         userService.insert(user);
     }
 
-    @RequestMapping(value="update")
+    @RequestMapping(value = "update")
     public void update(UserEntity user) {
         userService.update(user);
     }
 
-    @RequestMapping(value="/delete/{id}")
+    @RequestMapping(value = "/delete/{id}")
     public void delete(@PathVariable("id") Long id) {
         userService.delete(id);
     }
